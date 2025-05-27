@@ -4,12 +4,17 @@ import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 import { lusitana } from '@/app/ui/fonts';
 import { fetchCardData } from '@/app/lib/data';
 import { Suspense } from 'react';
+import { Metadata } from 'next';
 import { 
   RevenueChartSkeleton, 
   LatestInvoicesSkeleton, 
   CardSkeleton, 
 } from '@/app/ui/skeletons';
  
+export const metadata: Metadata = {
+  title: 'Home',
+};
+
 export default async function Page() {
   return (
     <main>
